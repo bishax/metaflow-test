@@ -18,8 +18,9 @@ jobs:
           # - "2.5.1"
           # - "2.5.0"
           # - "2.4.9"
-          - "7d1697d"  # https://github.com/Netflix/metaflow/pull/918
+          - "8753440"  # https://github.com/Netflix/metaflow/pull/928
           - "fed10b8"  # https://github.com/Netflix/metaflow/pull/933
+          - "7d1697d"  # https://github.com/Netflix/metaflow/pull/918
           - "62f5e52"  # https://github.com/Netflix/metaflow/pull/929
           - "8c2f776"  # https://github.com/Netflix/metaflow/pull/946
     continue-on-error: true
