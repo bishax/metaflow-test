@@ -18,9 +18,9 @@ jobs:
           - "2.5.1"
           - "2.5.0"
           - "2.4.9"
-
+    continue-on-error: true
     runs-on: ${{ matrix.os }}
-    name: Run pytest
+    name: Run test flow
     steps:
       - name: Checkout
         uses: actions/checkout@v2
