@@ -11,14 +11,15 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-latest
+          # - ubuntu-latest
           - macos-latest
         metaflowversion:
-          - "2.5.2"
-          - "2.5.1"
-          - "2.5.0"
-          - "2.4.9"
-          - "6b91231"
+          # - "2.5.2"
+          # - "2.5.1"
+          # - "2.5.0"
+          # - "2.4.9"
+          - "6b91231"  # https://github.com/Netflix/metaflow/pull/918
+          - "d6e8a1b"  # https://github.com/Netflix/metaflow/pull/933
     continue-on-error: true
     runs-on: ${{ matrix.os }}
     name: Run test flow
