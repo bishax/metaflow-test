@@ -44,6 +44,7 @@ jobs:
 
       - name: Install cross-platform dependencies
         run: |
+          conda install python=3.8
           $CONDA/bin/python -m pip install --upgrade pip
           $CONDA/bin/python -m pip install "metaflow==${{ matrix.metaflowversion }}"
           conda config --add channels conda-forge
