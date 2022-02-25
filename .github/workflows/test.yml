@@ -11,8 +11,12 @@ jobs:
     strategy:
       matrix:
         os:
-          # - ubuntu-latest
+          - ubuntu-latest
           - macos-latest
+        metaflowversion:
+          - "2.5.2"
+          - "2.5.1"
+
     runs-on: ${{ matrix.os }}
     name: Run pytest
     steps:
@@ -39,7 +43,7 @@ jobs:
       - name: Install cross-platform dependencies
         run: |
           $CONDA/bin/python -m pip install --upgrade pip
-          $CONDA/bin/python -m pip install metaflow==2.5.2
+          $CONDA/bin/python -m pip install "metaflow==${{ matrix.metaflowversion }}"
           conda config --add channels conda-forge
 
       - name: Get metaflow config
