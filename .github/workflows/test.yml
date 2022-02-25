@@ -56,4 +56,4 @@ jobs:
 
       - name: Run flow
         run: |
-          $CONDA/bin/python flow.py --environment conda --datastore local --metadata local run --with batch
+          $CONDA/bin/python flow.py --environment conda --datastore s3 --metadata local run --with batch
