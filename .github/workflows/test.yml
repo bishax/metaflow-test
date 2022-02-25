@@ -18,6 +18,7 @@ jobs:
           - "2.5.1"
           - "2.5.0"
           - "2.4.9"
+          - "6b91231"
     continue-on-error: true
     runs-on: ${{ matrix.os }}
     name: Run test flow
@@ -46,7 +47,7 @@ jobs:
         run: |
           conda install python=3.8
           $CONDA/bin/python -m pip install --upgrade pip
-          $CONDA/bin/python -m pip install "metaflow==${{ matrix.metaflowversion }}"
+          $CONDA/bin/python -m pip install "git+https://github.com/netflix/metaflow@${{ matrix.metaflowversion }}"
           conda config --add channels conda-forge
 
       - name: Get metaflow config
