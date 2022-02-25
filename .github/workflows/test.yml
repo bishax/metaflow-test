@@ -16,6 +16,8 @@ jobs:
         metaflowversion:
           - "2.5.2"
           - "2.5.1"
+          - "2.5.0"
+          - "2.4.9"
 
     runs-on: ${{ matrix.os }}
     name: Run pytest
